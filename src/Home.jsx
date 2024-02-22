@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar1 from './Components/Navbar/Navbar1'
 import HotProducts from './Components/HotProducts/HotProducts'
+import Logos from './Components/Logos'
 
 // function Home() {
 //   return (
@@ -35,6 +36,9 @@ function Home() {
       </div>
       <div>
         <HotProducts/>
+      </div>
+      <div>
+        <Logos/>
       </div>
     </div>
   )

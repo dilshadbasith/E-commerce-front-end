@@ -1,8 +1,10 @@
 import React, { useContext } from "react";
 import { myContext } from "../Context";
+import { useNavigate } from "react-router-dom";
 
 function HotProducts() {
   const { hotProducts } = useContext(myContext);
+  const navigate = useNavigate()
   return (
     <div className="pt-10 pl-36 pb-10 pr-36">
       <h1 className="pb-5 text-4xl font-poppins font-bold">Products</h1>
@@ -43,7 +45,8 @@ function HotProducts() {
           {hotProducts.map((item, index) => (
             <div
               key={index}
-              className=" w-[15rem] h-[15rem] border-2 border-gray-300"
+              className=" w-[15rem] h-[15rem] border-2 border-gray-300 cursor-pointer"
+              onClick={()=>navigate(`/browseHot/${item.id}`)}
             >
               <h1 className="bg-green-600 mt-3 ml-2 mr-44 pl-3 text-xs text-white pt-1 pb-1">HOT</h1>
 

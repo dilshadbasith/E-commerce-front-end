@@ -10,9 +10,11 @@ import {
 import { FaUser } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 function Navbar1() {
   const [openNav, setOpenNav] = React.useState(false);
+  const navigate = useNavigate()
 
   React.useEffect(() => {
     window.addEventListener(
@@ -63,7 +65,7 @@ function Navbar1() {
             href="#"
             className="mr-4 cursor-pointer py-1.5 font-medium"
           >
-            <img src={Logo} alt="image" />
+            <img src={Logo} alt="image" onClick={()=>navigate('/')}/>
           </Typography>
           <div className="flex items-center gap-4">
             <div className="mr-4 hidden lg:block">{navList}</div>

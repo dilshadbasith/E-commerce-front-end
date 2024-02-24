@@ -4,10 +4,15 @@ import { useParams } from 'react-router-dom'
 import Navbar1 from '../Navbar/Navbar1'
 
 function BrowseHot() {
-    const {hotProducts} = useContext(myContext)
+    const {hotProducts,cart,setCart} = useContext(myContext)
     const {id} = useParams()
 
     const data=hotProducts.filter((item)=>item.id===parseInt(id))
+
+    const AddtoCart = () =>{
+      setCart([...cart,...data])
+      alert("Product added")
+    }
   return (
     <div className='pt-5 pl-3 overflow-x-hidden'>
     <Navbar1/>
@@ -40,7 +45,7 @@ function BrowseHot() {
                       <p className="text-gray-500 font-bold line-through">{item.notemi}/-</p>
                     </span>
                   </div>
-                  <button className="bg-blue-500 text-white pt-3 pb-3 pl-8 pr-8 text-xs font-bold hover:bg-blue-700">
+                  <button onClick={AddtoCart} className="bg-blue-500 text-white pt-3 pb-3 pl-8 pr-8 text-xs font-bold hover:bg-blue-700">
                     ADD TO CART
                   </button>
                 </div>

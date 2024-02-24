@@ -74,6 +74,7 @@ function Navbar1() {
                 variant="text"
                 size="sm"
                 className="hidden lg:inline-block"
+                onClick={()=>navigate('/cart')}
               >
                 <FaShoppingCart className="text-lg" />
               </Button>

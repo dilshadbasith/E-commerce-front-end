@@ -6,14 +6,16 @@ import { myContext } from "./Components/Context";
 import { Route, Routes } from "react-router-dom";
 import BrowseHot from "./Components/BrowseHot/BrowseHot";
 import Cart from "./Components/Cart/Cart";
+import { productsdata } from "./assets/Products";
 
 function App() {
   const [hotProducts, setHotProducts] = useState(hotProductsdata);
+  const [products, setProducts] = useState(productsdata);
   const [cart,setCart] = useState([])
   return (
     <>
       <>
-        <myContext.Provider value={{hotProducts,setHotProducts,cart,setCart}}>
+        <myContext.Provider value={{hotProducts,setHotProducts,cart,setCart,products,setProducts}}>
           <Routes>
             <Route path="/" element={<Home/>}/>
             <Route path="/browseHot/:id" element={<BrowseHot/>}/>

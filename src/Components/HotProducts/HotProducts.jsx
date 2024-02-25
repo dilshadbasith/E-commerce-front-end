@@ -7,7 +7,10 @@ function HotProducts() {
   const navigate = useNavigate()
   return (
     <div className="pt-10 pl-36 pb-10 pr-36">
+      <div className="flex justify-between">
       <h1 className="pb-5 text-4xl font-poppins font-bold">Products</h1>
+      <h1 className=" font-poppins font-bold">All Products</h1>
+      </div>
       <div className="flex">
         <div className=" w-[40rem] h-[30rem] border-2 border-gray-300">
           <div className="flex items-center justify-around flex-col gap-7 pt-3">

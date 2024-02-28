@@ -10,8 +10,12 @@ function BrowseHot() {
     const data=hotProducts.filter((item)=>item.id===parseInt(id))
 
     const AddtoCart = () =>{
-      setCart([...cart,...data])
-      alert("Product added")
+      if(cart.includes(data[0])){
+        alert("This Product is already added!")
+      }else{
+        setCart([...cart,...data])
+        alert("Product added")
+      }
     }
   return (
     <div className='pt-5 pl-3 overflow-x-hidden'>

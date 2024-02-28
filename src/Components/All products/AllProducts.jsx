@@ -1,9 +1,13 @@
 import React, { useContext } from "react";
 import { myContext } from "../Context";
 import Navbar1 from "../Navbar/Navbar1";
+import { useNavigate } from "react-router-dom";
 
 function AllProducts() {
   const { products } = useContext(myContext);
+  const navigate = useNavigate()
+
+
   return (
     <>
       <div className="pt-4 pl-3">
@@ -38,8 +42,8 @@ function AllProducts() {
                   </p>
                 </span>
               </div>
-              <button className="bg-blue-500 text-white pt-3 pb-3 pl-8 pr-8 text-xs font-bold hover:bg-blue-700">
-                ADD TO CART
+              <button onClick={()=>navigate('/browseProduct')} className="bg-blue-500 text-white pt-3 pb-3 pl-8 pr-8 text-xs font-bold hover:bg-blue-700">
+                Veiw
               </button>
             </div>
           </div>

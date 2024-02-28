@@ -3,8 +3,11 @@ import { myContext } from "../Context";
 import { useNavigate } from "react-router-dom";
 
 function HotProducts() {
-  const { hotProducts } = useContext(myContext);
+  const { products } = useContext(myContext);
   const navigate = useNavigate()
+
+
+  const hotProducts=products.filter((item)=>item.status=="hot")
   return (
     <div className="pt-10 pl-36 pb-10 pr-36">
       <div className="flex justify-between">
@@ -45,7 +48,7 @@ function HotProducts() {
         </div>
 
         <div className="flex  flex-wrap">
-          {hotProducts.map((item, index) => (
+          {hotProducts?.map((item, index) => (
             <div
               key={index}
               className=" w-[15rem] h-[15rem] border-2 border-gray-300 cursor-pointer"

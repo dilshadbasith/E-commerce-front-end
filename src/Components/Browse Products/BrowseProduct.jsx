@@ -2,7 +2,7 @@ import React from 'react'
 
 function BrowseProduct() {
   return (
-    <div>hyy</div>
+    <div>hooi</div>
   )
 }
 

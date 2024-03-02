@@ -4,10 +4,10 @@ import { useParams } from 'react-router-dom'
 import Navbar1 from '../Navbar/Navbar1'
 
 function BrowseHot() {
-    const {hotProducts,cart,setCart} = useContext(myContext)
+    const {products,cart,setCart} = useContext(myContext)
     const {id} = useParams()
 
-    const data=hotProducts.filter((item)=>item.id===parseInt(id))
+    const data=products?.filter((item)=>item.id===parseInt(id))
 
     const AddtoCart = () =>{
       if(cart.includes(data[0])){
@@ -22,7 +22,7 @@ function BrowseHot() {
     <Navbar1/>
     <div className='flex justify-center items-center h-[100vh]'>
         {
-            data.map((item)=>(
+            data?.map((item)=>(
                 <div className=" w-[30rem] h-[28rem] border-2 border-gray-300 shadow-lg">
                 <div className="flex items-center justify-around flex-col gap-7 pt-3">
                   <div>

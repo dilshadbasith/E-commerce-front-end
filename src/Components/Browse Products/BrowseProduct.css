@@ -1,0 +1,21 @@
+/* .bcg-img {
+  background-image: url("../../assets/bg.jpg");
+  height: 40rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+
+} */
+
+.card1{
+    background: transparent;
+    backdrop-filter: blur(10px);
+    height: 30rem;
+    width: 30rem;
+    border: 1px solid gray;
+    border-radius: 8px;
+    
+}

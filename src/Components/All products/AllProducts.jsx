@@ -42,7 +42,7 @@ function AllProducts() {
                   </p>
                 </span>
               </div>
-              <button onClick={()=>navigate('/browseProduct')} className="bg-blue-500 text-white pt-3 pb-3 pl-8 pr-8 text-xs font-bold hover:bg-blue-700">
+              <button onClick={()=>navigate(`/browseProduct/${item.id}`)} className="bg-blue-500 text-white pt-3 pb-3 pl-8 pr-8 text-xs font-bold hover:bg-blue-700">
                 Veiw
               </button>
             </div>

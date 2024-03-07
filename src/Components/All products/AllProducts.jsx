@@ -14,7 +14,7 @@ function AllProducts() {
         <Navbar1 />
       </div>
       <div className="flex justify-around items-center flex-wrap gap-4 pt-8 ">
-        {products.map((item) => (
+        {products?.map((item) => (
           <div
             key={item.id}
             className=" w-[25rem] h-[27rem] border-2  shadow-2xl hover:scale-105 transition"

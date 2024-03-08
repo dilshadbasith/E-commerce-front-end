@@ -22,3 +22,15 @@
     align-items: center;
     
 }
+.card2{
+    background: transparent;
+    backdrop-filter: blur(10px);
+    height: 30rem;
+    width: 30rem;
+    border: 1px solid gray;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    
+}

@@ -7,9 +7,18 @@ import { FaCartShopping } from "react-icons/fa6";
 import { FaHeart } from "react-icons/fa";
 function BrowseProduct() {
   const { id } = useParams();
-  const { products } = useContext(myContext);
+  const { products,cart,setCart } = useContext(myContext);
 
   const filtered = products.filter((item) => item.id == id);
+
+  const AddtoCart = () =>{
+    if(cart.includes(filtered[0])){
+      alert("This Product is already added!")
+    }else{
+      setCart([...cart,...filtered])
+      alert("Product added")
+    }
+  }
 
   return (
     <div>
@@ -23,7 +32,7 @@ function BrowseProduct() {
           </div>
           <div className="card2">
             <div className="flex justify-start items-center flex-col">
-              <h2 className="text-4xl text-white pt-3">{item.name}</h2>
+              <h2 className="text-4xl text-white pt-3 text-center pl-2 pr-2">{item.name}</h2>
               <h2 className="text-2xl text-blue-800">{item.spec}</h2>
               <h2 className="text-lg text-white p-4 text-center">
                 {item.spec1}
@@ -37,7 +46,7 @@ function BrowseProduct() {
             </div>
             <div className="flex justify-around">
               <button className="bg-red-700 p-3 font-bold text-white rounded-xl flex items-center gap-1"><FaHeart />Add To Wishlist</button>
-              <button className="bg-blue-700 pt-3 pb-3 font-bold pl-5 pr-5 text-white rounded-xl flex items-center gap-1"><FaCartShopping />Add To Cart</button>
+              <button onClick={AddtoCart} className="bg-blue-700 pt-3 pb-3 font-bold pl-5 pr-5 text-white rounded-xl flex items-center gap-1"><FaCartShopping />Add To Cart</button>
             </div>
           </div>
         </div>

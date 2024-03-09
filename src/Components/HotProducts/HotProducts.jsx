@@ -19,7 +19,7 @@ function HotProducts() {
           <div className="flex items-center justify-around flex-col gap-7 pt-3">
             <div>
               <img
-                src="https://s3-alpha-sig.figma.com/img/054b/b5af/fb4c15d6c8e92034193e188cfbde0b22?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=jPq0iu3HKd0QzJirpaDMEe5cznydD4T~78SOJKvxVAUKWqaYvMx9cPWRW3z8SPHbpgJwXxwmGOYK39jhGHs14x0gT1rGtN4rS-ncqJHWfakew4dSIRBdq64xczr3qYKMh~KOOdi2wn9EFEujIWhXuSM4atNGhH5pchxVVGP8nXaaA5Kn7SzC4SILpkoEOMcombA4ffejV7fi46KWDFp0ItKhSa81zDR0LIpLXkRVAO8qaVR1~2nJA3tAA~WRQ99Fekg-Qgz3t1XCGazgn9fMzFiELy1frXBF4XL9JoPHftqpqNFXGZYzcMPQT0C3VCT8xijFMeXXwaHyLs4oZEsSxw__"
+                src="https://s3-alpha-sig.figma.com/img/054b/b5af/fb4c15d6c8e92034193e188cfbde0b22?Expires=1710720000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=iLPUC7jveawC9kGmuz25o7JQ-XdVkLFA9r0BTz8fHyagMoNwG9-6RPySgKFKa32jiJRyo~ejXcqwLkVfdetqXsOComCb8x4KUgdniRY0MYorI67StNBcJ-2B7K4IGIX6TxtN~4WiVBmw2CRLIU8wIHqrtbU48SXRCwi-tPralTyfSkR1cxRZZkc7T6yEPy5ayeGnjzxEMQ3HDf~2-fYZ1b-QA0CEYGBuivYt~JpupOBO0qNQt4SlTCKarBBsN-LR9YkxZYx6VGnDRZLGDkFNkCVOoLop59kS4uDzduhl7tDY1cBbx3jfZSGEvasil3q4dDuBnnLEIt4eJNPcqCRYhQ__"
                 alt="image"
                 className="h-[10rem] "
               />

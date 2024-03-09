@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Logo from "../../assets/DEMO.png";
 import {
   Navbar,
@@ -11,10 +11,12 @@ import { FaUser } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import { myContext } from "../Context";
 
 function Navbar1() {
   const [openNav, setOpenNav] = React.useState(false);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const { cart } = useContext(myContext);
 
   React.useEffect(() => {
     window.addEventListener(
@@ -65,7 +67,7 @@ function Navbar1() {
             href="#"
             className="mr-4 cursor-pointer py-1.5 font-medium"
           >
-            <img src={Logo} alt="image" onClick={()=>navigate('/')}/>
+            <img src={Logo} alt="image" onClick={() => navigate("/")} />
           </Typography>
           <div className="flex items-center gap-4">
             <div className="mr-4 hidden lg:block">{navList}</div>
@@ -74,9 +76,12 @@ function Navbar1() {
                 variant="text"
                 size="sm"
                 className="hidden lg:inline-block"
-                onClick={()=>navigate('/cart')}
+                onClick={() => navigate("/cart")}
               >
-                <FaShoppingCart className="text-lg" />
+                <div className="flex">
+                  <FaShoppingCart className="text-lg" />
+                  <sup className="bg-red-600 text-white ">{cart.length}</sup>  
+                </div>
               </Button>
               <Button
                 variant="text"

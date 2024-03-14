@@ -80,7 +80,7 @@ function Navbar1() {
               >
                 <div className="flex">
                   <FaShoppingCart className="text-lg" />
-                  <sup className="bg-red-600 text-white ">{cart.length}</sup>  
+                  <sup className="bg-red-600 text-white h-3 w-3 pt-1.5 rounded-3xl">{cart.length}</sup>  
                 </div>
               </Button>
               <Button

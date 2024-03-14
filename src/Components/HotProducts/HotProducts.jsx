@@ -1,6 +1,8 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { myContext } from "../Context";
 import { useNavigate } from "react-router-dom";
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 function HotProducts() {
   const { products } = useContext(myContext);
@@ -8,14 +10,18 @@ function HotProducts() {
 
 
   const hotProducts=products.filter((item)=>item.status=="hot")
+
+  useEffect(()=>{
+    AOS.init({duration:1000})
+  },[])
   return (
     <div className="pt-10 pl-36 pb-10 pr-36">
       <div className="flex justify-between">
-      <h1 className="pb-5 text-4xl font-poppins font-bold">Products</h1>
+      <h1 className="pb-5 text-4xl font-poppins font-bold" data-aos="fade-down">Products</h1>
       <h1 className=" font-poppins font-bold cursor-pointer" onClick={()=>navigate('/allproducts')}>All Products</h1>
       </div>
-      <div className="flex">
-        <div className=" w-[40rem] h-[30rem] border-2 border-gray-300">
+      <div className="flex" >
+        <div className=" w-[40rem] h-[30rem] border-2 border-gray-300" data-aos="fade-right">
           <div className="flex items-center justify-around flex-col gap-7 pt-3">
             <div>
               <img
@@ -47,12 +53,13 @@ function HotProducts() {
           </div>
         </div>
 
-        <div className="flex  flex-wrap">
+        <div className="flex  flex-wrap" data-aos="fade-left">
           {hotProducts?.map((item, index) => (
             <div
               key={index}
               className=" w-[15rem] h-[15rem] border-2 border-gray-300 cursor-pointer"
               onClick={()=>navigate(`/browseHot/${item.id}`)}
+              data-aos="flip-left"
             >
               <h1 className="bg-green-600 mt-3 ml-2 mr-44 pl-3 text-xs text-white pt-1 pb-1">HOT</h1>
 

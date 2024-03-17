@@ -43,8 +43,8 @@ function HotProducts() {
             <div>
               <span className="flex gap-3 items-center">
                 <p className="text-sm">OMR</p>
-                <p className="font-bold">4,699/-</p>
-                <p className="text-gray-500 font-bold line-through">5,799/-</p>
+                <p className="font-bold">120000/-</p>
+                <p className="text-gray-500 font-bold line-through">125000/-</p>
               </span>
             </div>
             <button className="bg-blue-500 text-white pt-3 pb-3 pl-8 pr-8 text-xs font-bold hover:bg-blue-700">
